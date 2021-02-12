@@ -1,5 +1,5 @@
-let firstName = "Hervé";
-let lastName = "Richard";
+let firstName = "Leon";
+let lastName = "Kennedy";
 
 let numberofviewer = 255;
 const daysperweek = 7;
@@ -12,28 +12,24 @@ let positive = 42;
 let negative = -42;
 let decimal = 42.2;
 
-let hervéRichardInfo = {
-	prénom: "Hervé",
-	Nom: "Richard",
-	classe: "freeLance",
+let chrisRedfieldInfo = {
+	prénom: "Chris",
+	Nom: "Redfield",
+	classe: "BSAA",
 	hearthPoint: 305,
 	mindPoint: 5,
 	partyMemberAvaiable: true
 };
 
-let infoEnjalbert = new InfoPersonnages (
-	"David",
-	"Enjalbert",
+let infoCloud = new InfoPersonnages (
+	"Cloud",
+	"Strife",
 	"samourai",
 	4500,
 	70,
 	false
 	);
 
-let hervéClass = hervéRichardInfo.class;
-let hervéHearthPoint = hervéRichardInfo.class;
-let hervéMindPoint = hervéRichardInfo.class;
-let hervéParyMemberAvaiable = hervéRichardInfo.partyMemberAvaiable;
 
 class InfoPersonnages {
 	constructor (prénom, nom, classe, hearthPoint, mindPoint, partyMemberAvaiable){
@@ -45,6 +41,8 @@ class InfoPersonnages {
 		this.partyMemberAvaiable = partyMemberAvaiable;
 	}
 }
+
+
 
 console.log(typeof userIsSignedIn);
 console.log(firstName + " " + lastName);

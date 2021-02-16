@@ -11,9 +11,10 @@ const maxCharacterHearthPoint = 9999;
 const maxCharacterManaPoint = 999;
 
 class characterStats {
-	constructor (name, classtype, hearthPoint, mindPoint, powerPoint, magicPoint, mindPoint, physicalPoint) {
+	constructor (name, classtype, gender, hearthPoint, mindPoint, powerPoint, magicPoint, mindPoint, physicalPoint) {
 		this.classtype = Type;
 		this.name = NAME;
+		this.gender = gender;
 		this.hearthPoint = HP;
 		this.mindPoint = MP;
 		this.powerPoint = FOR;
@@ -23,10 +24,11 @@ class characterStats {
 	}
 }
 
-let tidusBaseStats = new characterStats ("tidus", "webDev", 305, 0, 5, 2, 10, 4);
-let wakkaBaseStats = new characterStats ("wakka","ballPro", 3000, 50, 17, 25, 50, 40);
-let auronBaseStats = new characterStats ("Auron", "Samourai", 4500, 12, 24, 10, 25, 30);
-let kimahriBaseStats = new characterStats ("kimahri","Animator", 2500, 25, 22, 7, 27, 28);
+let tidusBaseStats = new characterStats ("tidus", "webDev", "boy", 305, 0, 5, 2, 10, 4);
+let wakkaBaseStats = new characterStats ("wakka","ballPro", "boy", 3000, 50, 17, 25, 50, 40);
+let auronBaseStats = new characterStats ("Auron", "Samourai", "boy", 4500, 12, 24, 10, 25, 30);
+let kimahriBaseStats = new characterStats ("kimahri","Animator", "boy", 2500, 25, 22, 7, 27, 28);
+let yunaBaseStats = new characterStats ("Yuna", "Summoner", "girl", 250, 60, 2, 45, 100, 5);
 
 let initialCharacter = characterStatsArray[0];
 
@@ -34,13 +36,31 @@ let secondCharacter = characterStatsArray[1];
 
 tidusBaseStats.HP = 310;
 
-characterStatsArray.push (auronBaseStats, kimahriBaseStats);
+characterStatsArray.push (auronBaseStats, kimahriBaseStats, yunaBaseStats);
+
+let textMessageGender
+
+switch (characterStats.gender) {
+	case "boy":
+		textMessageGender = "You are a boy";
+	break
+
+	case "girl":
+		textMessageGender = "You are a girl";
+	break
+
+	default:
+		textMessageGender = "Boy or Girl ?";
+}
+
 
 
 /*--------------------------------------*/
 
 /*L' Experiences
  -----------------------*/
+
+
 
 
 let level1ToNextLevelXp = 10;
@@ -78,8 +98,19 @@ let rings11InTheMap = 1;
 ringsCollected = [rings11InTheMap, rings9InTheMap, rings10InTheMap, rings5InTheMap, rings2InTheMap
 ];
 
+ringsCollectedAfterAttack = [];
+
 ringsHudCounter = ringsCollected.length;
 ringsRemoveWhenTrade = ringsCollected.pop;
+
+livesCounter = 3;
+
+if (ringsCollected == 100)
+ {livesCounter ++ && ringsCollected = 0}
+	else
+	 {"pas de vie"} ;
+
+
 
 
 /*--------------------------------------------*/

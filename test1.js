@@ -114,3 +114,44 @@ if (ringsCollected == 100)
 
 
 /*--------------------------------------------*/
+
+/* TEMPS
+----------------------------------------------*/
+
+
+	let hours = 2;
+	let minutes = 35;
+	let secondes = 22;
+	const secondesPerMinute = 60;
+
+	let appleGainPerSeconde = 1;
+
+	for ( let i = 0; i < 60; i++ ){
+
+	};
+
+while (secondes = 60){
+	secondes = 0;
+	minutes ++;
+}
+
+
+/*------------------------------------------*/
+
+
+/* TRADE
+--------------------------------------------*/
+
+
+	let moneyOnMe = 5;
+	let applePrice = 3;
+
+	const Trade = ( userMoney, articlePrice) =>{
+		const tradeCalcul = userMoney - articlePrice;
+		return = tradeCalcul;
+	};
+
+	let moneyOnMeAfterAppleTrade = Trade(moneyOnMe, applePrice);
+
+
+/*------------------------------------------*/
